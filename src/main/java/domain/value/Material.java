@@ -2,23 +2,23 @@ package domain.value;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-public class Material implements ValueObject<Material.Nombre> {
-    private final Nombre value;
+public class Material implements ValueObject<Material.Filamento> {
+    private final Filamento value;
 
     public Material() {
-        this.value=Nombre.PLA;
+        this.value=Filamento.PLA;
     }
 
-    public Material(Nombre value) {
+    public Material(Filamento value) {
         this.value = value;
     }
 
     @Override
-    public Nombre value(){
+    public Filamento value(){
         return value;
     }
-    
-    public enum Nombre{
+
+    public enum Filamento{
         PLA, ABS, PETG, NYLON
     }
 }
