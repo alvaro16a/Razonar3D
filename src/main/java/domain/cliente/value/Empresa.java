@@ -20,12 +20,12 @@ public class Empresa implements ValueObject<Empresa.Props> {
         return new Props() {
             @Override
             public String nombre() {
-                return null;
+                return nombre;
             }
 
             @Override
             public String rut() {
-                return null;
+                return rut;
             }
         };
     }
