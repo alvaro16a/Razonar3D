@@ -2,6 +2,7 @@ package domain.granja;
 
 import co.com.sofka.domain.generic.EventChange;
 import domain.granja.event.GranjaCreada;
+import domain.granja.event.ImpresionIncluida;
 import domain.granja.event.ImpresoraIncluida;
 
 import java.util.ArrayList;
@@ -21,6 +22,10 @@ public class GranjaEventChange extends EventChange {
         apply((ImpresoraIncluida event) ->{
             granja.impresoras.put(event.getImpresoraID().value(),//convierto el Id en la llave
                     new Impresora3D(event.getImpresoraID()));
+        });
+
+        apply((ImpresionIncluida event) ->{
+            granja.stls.add(event.getStl());
         });
     }
 }
