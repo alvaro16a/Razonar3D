@@ -42,7 +42,7 @@ public class Persona implements ValueObject<Persona.Props> {
             }
         };
     }
-    
+
     public interface Props{
         String nombre();
         String apellido();
