@@ -7,18 +7,18 @@ import domain.granja.value.ImpresoraID;
 public class IniciarImpresion extends Command {
 
     private final GranjaID granjaID;
-    private final ImpresoraID impresora3DID;
+    private final ImpresoraID impresoraID;
 
-    public IniciarImpresion(GranjaID granjaID, ImpresoraID impresora3DID) {
+    public IniciarImpresion(GranjaID granjaID, ImpresoraID impresoraID) {
         this.granjaID = granjaID;
-        this.impresora3DID = impresora3DID;
+        this.impresoraID = impresoraID;
     }
 
     public GranjaID getGranjaID() {
         return granjaID;
     }
 
-    public ImpresoraID getImpresora3DID() {
-        return impresora3DID;
+    public ImpresoraID getImpresoraID() {
+        return impresoraID;
     }
 }
