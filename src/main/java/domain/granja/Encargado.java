@@ -46,4 +46,16 @@ public class Encargado extends Entity<EncargadoID> {
             this.capacidadDeAdministrarImpresoras = capacidadDeAdministrarImpresoras;
         }
     }
+
+    public Persona getPersona() {
+        return persona;
+    }
+
+    public Productividad getProductividadLaboral() {
+        return productividadLaboral;
+    }
+
+    public int getCapacidadDeAdministrarImpresoras() {
+        return capacidadDeAdministrarImpresoras;
+    }
 }
