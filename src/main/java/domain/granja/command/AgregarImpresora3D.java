@@ -18,7 +18,7 @@ public class AgregarImpresora3D extends Command {
         return granjaID;
     }
 
-    public ImpresoraID getImpresora3DID() {
+    public ImpresoraID getImpresoraID() {
         return impresoraID;
     }
 
