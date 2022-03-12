@@ -4,6 +4,7 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import domain.granja.event.GranjaCreada;
 import domain.granja.event.ImpresionIncluida;
+import domain.granja.event.ImpresionIniciada;
 import domain.granja.event.ImpresoraIncluida;
 import domain.granja.value.GranjaID;
 import domain.granja.value.ImpresoraID;
@@ -39,4 +40,5 @@ public class Granja extends AggregateEvent<GranjaID> {
         appendChange(new ImpresoraIncluida(entityId)).apply();
     }
     public void agregarImpresion(Stl stl){appendChange(new ImpresionIncluida(stl)).apply(); }
+    public void iniciarImpresion(ImpresoraID entityId){appendChange(new ImpresionIniciada(entityId)).apply();}
 }

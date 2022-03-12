@@ -35,6 +35,7 @@ public class AgregarImpresora3DUseCaseTest {
         ImpresoraID impresoraID = ImpresoraID.of("mimpresora");
         var command = new AgregarImpresora3D(granjaID,impresoraID);
 
+
         var usecase= new AgregarImpresora3DUseCase();
         Mockito.when(repository.getEventsBy("migranjita")).thenReturn(history());  //le estoy dando la simulacion al mock
         usecase.addRepository(repository);
@@ -45,6 +46,7 @@ public class AgregarImpresora3DUseCaseTest {
                 .syncExecutor(usecase, new RequestCommand<>(command))
                 .orElseThrow()
                 .getDomainEvents();
+
         //asert
 
         var event = (ImpresoraIncluida) events.get(0);
@@ -54,7 +56,7 @@ public class AgregarImpresora3DUseCaseTest {
 
     private List<DomainEvent> history() {
         Persona persona= new Persona("Alvaro","Mena","1234");
-        Encargado encargado = new Encargado(EncargadoID.of("encargado"),persona,8);
+        Encargado encargado = new Encargado(EncargadoID.of("encargado"),persona,1);
         return List.of(new GranjaCreada(encargado));
     }
 
