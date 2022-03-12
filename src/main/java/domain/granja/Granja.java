@@ -1,6 +1,7 @@
 package domain.granja;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import domain.granja.event.GranjaCreada;
 import domain.granja.value.GranjaID;
 import domain.value.Stl;
 
@@ -15,6 +16,7 @@ public class Granja extends AggregateEvent<GranjaID> {
 
     public Granja(GranjaID entityId, Encargado encargado) {
         super(entityId);
-        this.encargado = encargado;
+        appendChange(new GranjaCreada(encargado)).apply();
+        subscribe(new GranjaEventChange(this)); //Para realizar un cambio en el estado debo suscribirla
     }
 }
