@@ -3,6 +3,7 @@ package domain.cliente;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import domain.cliente.event.ClienteJuridicoCreado;
+import domain.cliente.event.ClienteNaturalCreado;
 import domain.cliente.value.ClienteID;
 import domain.cliente.value.Empresa;
 import domain.cliente.value.InformacionDeContacto;
@@ -28,6 +29,8 @@ public class Cliente extends AggregateEvent<ClienteID> {
         super(entityId);
         this.persona = persona;
         this.contacto = contacto;
+        appendChange(new ClienteNaturalCreado(persona, contacto)).apply();
+        subscribe(new ClienteEventChange(this));
     }
 
 }
