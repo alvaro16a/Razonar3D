@@ -2,17 +2,19 @@ package domain.tallerdediseno.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import domain.tallerdediseno.Disenador;
+import domain.tallerdediseno.value.TallerDeDisenoID;
 
 public class TallerDeDisenoCreado extends DomainEvent {
 
-    private final Disenador disenador;
+    private final TallerDeDisenoID tallerDeDisenoID;
 
-    public TallerDeDisenoCreado(Disenador disenador) {
+    public TallerDeDisenoCreado( TallerDeDisenoID entityId) {
         super("tallerdediseno.creado");
-        this.disenador=disenador;
+        this.tallerDeDisenoID=entityId;
+
     }
 
-    public Disenador getDisenador() {
-        return disenador;
+    public TallerDeDisenoID getTallerDeDisenoID() {
+        return tallerDeDisenoID;
     }
 }

@@ -1,6 +1,7 @@
 package domain.tallerdediseno;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import domain.granja.GranjaEventChange;
 import domain.tallerdediseno.event.TallerDeDisenoCreado;
 import domain.tallerdediseno.value.TallerDeDisenoID;
 import domain.value.Boceto;
@@ -14,9 +15,10 @@ public class TallerDeDiseno extends AggregateEvent<TallerDeDisenoID> {
     protected Map<String, Disenador> diseñadores;
     protected List<Boceto> bocetos;
 
-    public TallerDeDiseno(TallerDeDisenoID entityId,Disenador disenador) {
+    public TallerDeDiseno(TallerDeDisenoID entityId) {
         super(entityId);
-        appendChange(new TallerDeDisenoCreado(disenador)).apply();
+        appendChange(new TallerDeDisenoCreado(entityId)).apply();
+        subscribe(new TallerDeDisenoEventChange(this)); //Para realizar un cambio en el estado debo suscribirla
     }
 /*
     private TallerDeDiseno(TallerDeDisenoID tallerDeDisenoID) {

@@ -3,17 +3,18 @@ package domain.tallerdediseno;
 import co.com.sofka.domain.generic.Entity;
 import domain.granja.value.EncargadoID;
 import domain.granja.value.Productividad;
+import domain.tallerdediseno.value.DisenadorID;
 import domain.value.Persona;
 
 import java.util.Objects;
 
-public class Disenador extends Entity<EncargadoID> {
+public class Disenador extends Entity<DisenadorID> {
 
     private Persona persona;
     private Productividad productividadLaboral;
     private int numeroDeProyectosEnSimultaneo;
 
-    public Disenador(EncargadoID entityId, Persona persona) {
+    public Disenador(DisenadorID entityId, Persona persona, int numeroDeProyectosEnSimultaneo) {
         super(entityId);
         this.persona = persona;
         if(numeroDeProyectosEnSimultaneo <= 0){

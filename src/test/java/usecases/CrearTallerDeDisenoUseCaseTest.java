@@ -18,28 +18,32 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CrearGranjaUseCaseTest {
+class CrearTallerDeDisenoUseCaseTest {
 
     @Test
-    void crearGranja(){
+    void crearTallerDeDiseno(){
 
         //arrange
-        GranjaID granjaID = GranjaID.of("valor"); //de esta forma se crea un id quemado por el usuario
-        Persona persona= new Persona("Alvaro","Mena","1234");
+        TallerDeDisenoID tallerDeDisenoID = TallerDeDisenoID.of("taller");
+        DisenadorID disenadorID = DisenadorID.of("disenador");
+        Persona persona = new Persona("alvaro","mena","123456789");
 
-        Encargado encargado = new Encargado(EncargadoID.of("encargado"),persona,8);
-        var command = new CrearGranja(granjaID,encargado);
-        var usecase= new CrearGranjaUseCase();
+        var command = new CrearTallerDeDiseno(tallerDeDisenoID);
+        var usecase= new CrearTallerDeDisenoUseCase();
         //act
+
         var events = UseCaseHandler.getInstance()
                 .syncExecutor(usecase,new RequestCommand<>(command))
                 .orElseThrow()//En caso de no haber respuesta lanza exepcion
                 .getDomainEvents();
+
         //asert
-        var event = (GranjaCreada)events.get(0);
-        Assertions.assertEquals("granja.granjacreada",event.type);//garantizo el tipo del evento
-        Assertions.assertEquals(encargado,event.getEncargado());//de esta forma garantizo que el encargado sea el correcto
+
+        var event = (TallerDeDisenoCreado)events.get(0);
+        Assertions.assertEquals("tallerdediseno.creado",event.type);//garantizo el tipo del evento
+        Assertions.assertEquals("taller",event.getTallerDeDisenoID().value());
 
     }
+
 
 }
