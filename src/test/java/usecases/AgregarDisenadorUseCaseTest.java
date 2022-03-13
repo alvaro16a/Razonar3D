@@ -4,7 +4,7 @@ import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.tallerdediseno.command.AgregarDiseñador;
+import domain.tallerdediseno.command.AgregarDisenador;
 import domain.tallerdediseno.event.DisenadorAgregadado;
 import domain.tallerdediseno.event.TallerDeDisenoCreado;
 import domain.tallerdediseno.value.DisenadorID;
@@ -31,7 +31,7 @@ class AgregarDisenadorUseCaseTest {
         TallerDeDisenoID tallerDeDisenoID = TallerDeDisenoID.of("taller");
         DisenadorID disenadorID = DisenadorID.of("diseñador");
         Persona persona = new Persona("alvaro", "mena", "123456789");
-        var command = new AgregarDiseñador(tallerDeDisenoID, disenadorID, persona, 5);
+        var command = new AgregarDisenador(tallerDeDisenoID, disenadorID, persona, 5);
 
         var usecase = new AgregarDisenadorUseCase();
         Mockito.when(repository.getEventsBy("taller")).thenReturn(history());  //le estoy dando la simulacion al mock
