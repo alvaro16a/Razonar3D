@@ -47,8 +47,8 @@ public class Cliente extends AggregateEvent<ClienteID> {
         return cliente;
     }
 
-    public void crearTrabajo(TrabajoID trabajoID, Idea idea, Tipo tipo){
-        appendChange(new TrabajoCreado(trabajoID, idea, tipo)).apply();
+    public void crearTrabajo(TrabajoID trabajoID, Tipo tipo){
+        appendChange(new TrabajoCreado(trabajoID, tipo)).apply();
     }
 
 }

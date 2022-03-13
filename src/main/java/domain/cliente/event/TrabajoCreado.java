@@ -8,22 +8,16 @@ import domain.value.Idea;
 public class TrabajoCreado extends DomainEvent {
 
     private final TrabajoID trabajoID;
-    private final Idea idea;
     private final Tipo tipo;
 
-    public TrabajoCreado(TrabajoID trabajoID, Idea idea, Tipo tipo) {
-        super("cilente.trabajocreado");
+    public TrabajoCreado(TrabajoID trabajoID, Tipo tipo) {
+        super("cliente.trabajocreado");
         this.trabajoID = trabajoID;
-        this.idea = idea;
         this.tipo = tipo;
     }
 
     public TrabajoID getTrabajoID() {
         return trabajoID;
-    }
-
-    public Idea getIdea() {
-        return idea;
     }
 
     public Tipo getTipo() {

@@ -9,6 +9,8 @@ import domain.value.Idea;
 import domain.value.Pieza;
 import domain.value.Stl;
 
+import java.util.Objects;
+
 public class Trabajo extends Entity<TrabajoID> {
 
     private Idea idea;
@@ -17,9 +19,9 @@ public class Trabajo extends Entity<TrabajoID> {
     private Pieza pieza;
     private Tipo tipo;
 
-    public Trabajo(TrabajoID entityId, Idea idea, Tipo tipo) {
+    public Trabajo(TrabajoID entityId, Tipo tipo) {
         super(entityId);
-        this.tipo = tipo;
+        this.tipo = Objects.requireNonNull(tipo);
     }
 
     public void solicitarConsultoria(Idea idea, Fase faseFinal){

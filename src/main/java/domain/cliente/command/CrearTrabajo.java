@@ -12,13 +12,11 @@ public class CrearTrabajo extends Command {
 
     private final ClienteID clienteID;
     private final TrabajoID trabajoID;
-    private final Idea idea;
     private final Tipo tipo;
 
-    public CrearTrabajo(ClienteID clienteID, TrabajoID trabajoID, Idea idea, Tipo tipo) {
+    public CrearTrabajo(ClienteID clienteID, TrabajoID trabajoID, Tipo tipo) {
         this.clienteID = clienteID;
         this.trabajoID = trabajoID;
-        this.idea = Objects.requireNonNull(idea);
         this.tipo = Objects.requireNonNull(tipo);
     }
 
@@ -28,10 +26,6 @@ public class CrearTrabajo extends Command {
 
     public TrabajoID getTrabajoID() {
         return trabajoID;
-    }
-
-    public Idea getIdea() {
-        return idea;
     }
 
     public Tipo getTipo() {
