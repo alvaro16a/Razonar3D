@@ -25,8 +25,6 @@ class CrearTallerDeDisenoUseCaseTest {
 
         //arrange
         TallerDeDisenoID tallerDeDisenoID = TallerDeDisenoID.of("taller");
-        DisenadorID disenadorID = DisenadorID.of("disenador");
-        Persona persona = new Persona("alvaro","mena","123456789");
 
         var command = new CrearTallerDeDiseno(tallerDeDisenoID);
         var usecase= new CrearTallerDeDisenoUseCase();
