@@ -8,13 +8,13 @@ import domain.value.Boceto;
 public class AgregarDiseno extends Command {
 
     private  final TallerDeDisenoID tallerDeDisenoID;
-    private  final DisenoID entityId;
+    private  final DisenoID disenoID;
     private  final Boceto boceto;
     private  final String comentariosDeBoceto;
 
     public AgregarDiseno(TallerDeDisenoID tallerDeDisenoID, DisenoID entityId, Boceto boceto, String comentariosDeBoceto) {
         this.tallerDeDisenoID = tallerDeDisenoID;
-        this.entityId = entityId;
+        this.disenoID = entityId;
         this.boceto = boceto;
         this.comentariosDeBoceto = comentariosDeBoceto;
     }
@@ -23,8 +23,8 @@ public class AgregarDiseno extends Command {
         return tallerDeDisenoID;
     }
 
-    public DisenoID getEntityId() {
-        return entityId;
+    public DisenoID getDisenoID() {
+        return disenoID;
     }
 
     public Boceto getBoceto() {
