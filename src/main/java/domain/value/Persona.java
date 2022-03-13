@@ -49,4 +49,11 @@ public class Persona implements ValueObject<Persona.Props> {
         String documento();
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
 }
