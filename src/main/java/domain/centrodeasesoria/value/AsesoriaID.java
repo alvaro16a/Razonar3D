@@ -1,16 +1,16 @@
-package domain.tallerdediseno.value;
+package domain.centrodeasesoria.value;
 
 import co.com.sofka.domain.generic.Identity;
 
-public class DisenadorID extends Identity {
+public class AsesoriaID extends Identity {
 
-    private DisenadorID(String valor){ //este constructor privado le asigna el valor al id
+    private AsesoriaID(String valor){ //este constructor privado le asigna el valor al id
         super(valor);
     }
 
-    public DisenadorID(){} //Este permite que se cree el elemento
-    public static DisenadorID of(String valor) {
-        return new DisenadorID(valor);
+    public AsesoriaID(){} //Este permite que se cree el elemento
+    public static AsesoriaID of(String valor) {
+        return new AsesoriaID(valor);
     }
 
 }
