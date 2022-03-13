@@ -1,13 +1,10 @@
 package domain.tallerdediseno;
 
 import co.com.sofka.domain.generic.Entity;
-import domain.granja.value.Estado;
 import domain.tallerdediseno.value.DisenoID;
 import domain.tallerdediseno.value.EstadoDelDiseno;
 import domain.value.Boceto;
 import domain.value.Stl;
-
-import java.util.Objects;
 
 public class Diseno extends Entity<DisenoID> {
 
