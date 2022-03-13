@@ -5,6 +5,8 @@ import domain.cliente.value.ClienteID;
 import domain.cliente.value.Empresa;
 import domain.cliente.value.InformacionDeContacto;
 
+import java.util.Objects;
+
 public class CrearClienteJuridico extends Command {
 
     private final ClienteID clienteID;
@@ -13,8 +15,8 @@ public class CrearClienteJuridico extends Command {
 
     public CrearClienteJuridico(ClienteID entityId, Empresa empresa, InformacionDeContacto contacto) {
         this.clienteID = entityId;
-        this.empresa = empresa;
-        this.contacto = contacto;
+        this.empresa = Objects.requireNonNull(empresa);
+        this.contacto = Objects.requireNonNull(contacto);
     }
 
     public ClienteID getClienteID() {
