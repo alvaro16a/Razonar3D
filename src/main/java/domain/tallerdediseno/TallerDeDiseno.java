@@ -1,6 +1,7 @@
 package domain.tallerdediseno;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import domain.tallerdediseno.event.TallerDeDisenoCreado;
 import domain.tallerdediseno.value.TallerDeDisenoID;
 import domain.value.Boceto;
 
@@ -15,7 +16,7 @@ public class TallerDeDiseno extends AggregateEvent<TallerDeDisenoID> {
 
     public TallerDeDiseno(TallerDeDisenoID entityId,Disenador disenador) {
         super(entityId);
-        //appendChange(new TallerDeDisenoCreado(disenador)).apply();
+        appendChange(new TallerDeDisenoCreado(disenador)).apply();
     }
 /*
     private TallerDeDiseno(TallerDeDisenoID tallerDeDisenoID) {

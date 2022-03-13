@@ -16,6 +16,4 @@ public class GranjaCreada extends DomainEvent {
     public Encargado getEncargado() {
         return encargado;
     }
-
-
 }
