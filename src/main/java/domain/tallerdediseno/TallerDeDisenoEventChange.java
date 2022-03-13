@@ -1,10 +1,9 @@
 package domain.tallerdediseno;
 
 import co.com.sofka.domain.generic.EventChange;
-import domain.tallerdediseno.event.DiseñadorAgregadado;
+import domain.tallerdediseno.event.DisenadorAgregadado;
+import domain.tallerdediseno.event.DisenoAgregadado;
 import domain.tallerdediseno.event.TallerDeDisenoCreado;
-import domain.tallerdediseno.value.DisenadorID;
-import domain.value.Persona;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,8 +17,12 @@ public class TallerDeDisenoEventChange extends EventChange {
             tallerDeDiseno.bocetos = new ArrayList<>();
         });
 
-        apply((DiseñadorAgregadado event) -> {
+        apply((DisenadorAgregadado event) -> {
             tallerDeDiseno.diseñadores.put(event.getDisenadorID().value(),new Disenador(event.getDisenadorID(),event.getPersona(),event.getNumeroDeProyectosEnSimultaneo()));
+        });
+
+        apply((DisenoAgregadado event) -> {
+            tallerDeDiseno.diseños.put(event.getDicenoID().value(),new Diseno(event.getDicenoID(),event.getBoceto(), event.getComentariosDeBoceto()));
         });
     }
 }

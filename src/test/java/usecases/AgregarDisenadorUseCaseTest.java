@@ -5,7 +5,7 @@ import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
 import domain.tallerdediseno.command.AgregarDiseñador;
-import domain.tallerdediseno.event.DiseñadorAgregadado;
+import domain.tallerdediseno.event.DisenadorAgregadado;
 import domain.tallerdediseno.event.TallerDeDisenoCreado;
 import domain.tallerdediseno.value.DisenadorID;
 import domain.tallerdediseno.value.TallerDeDisenoID;
@@ -44,7 +44,7 @@ class AgregarDisenadorUseCaseTest {
                 .getDomainEvents();
         //asert
 
-        var event = (DiseñadorAgregadado) events.get(0);
+        var event = (DisenadorAgregadado) events.get(0);
         Assertions.assertEquals("tallerdediseno.disenadoragregado",event.type);
         Assertions.assertEquals("diseñador",event.getDisenadorID().value());
         Assertions.assertEquals(persona,event.getPersona());

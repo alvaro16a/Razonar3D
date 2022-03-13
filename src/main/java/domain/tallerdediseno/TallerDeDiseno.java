@@ -2,12 +2,11 @@ package domain.tallerdediseno;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.granja.GranjaEventChange;
-import domain.granja.event.ImpresoraIncluida;
-import domain.granja.value.ImpresoraID;
-import domain.tallerdediseno.event.DiseñadorAgregadado;
+import domain.tallerdediseno.event.DisenadorAgregadado;
+import domain.tallerdediseno.event.DisenoAgregadado;
 import domain.tallerdediseno.event.TallerDeDisenoCreado;
 import domain.tallerdediseno.value.DisenadorID;
+import domain.tallerdediseno.value.DisenoID;
 import domain.tallerdediseno.value.TallerDeDisenoID;
 import domain.value.Boceto;
 import domain.value.Persona;
@@ -27,9 +26,7 @@ public class TallerDeDiseno extends AggregateEvent<TallerDeDisenoID> {
         subscribe(new TallerDeDisenoEventChange(this)); //Para realizar un cambio en el estado debo suscribirla
     }
 
-    public void agregarDiseñador(DisenadorID disenadorID, Persona persona, int numeroDeProyectosEnSimultaneo){
-        appendChange(new DiseñadorAgregadado(disenadorID,persona,numeroDeProyectosEnSimultaneo)).apply();
-    }
+
 
     private TallerDeDiseno(TallerDeDisenoID tallerDeDisenoID,String use) {
         super(tallerDeDisenoID);
@@ -41,4 +38,13 @@ public class TallerDeDiseno extends AggregateEvent<TallerDeDisenoID> {
         events.forEach(tallerDeDiseno::applyEvent);
         return tallerDeDiseno;
     }
+
+    public void agregarDiseñador(DisenadorID disenadorID, Persona persona, int numeroDeProyectosEnSimultaneo){
+        appendChange(new DisenadorAgregadado(disenadorID,persona,numeroDeProyectosEnSimultaneo)).apply();
+    }
+
+    public void agregarDiseno(DisenoID disenoID, Boceto boceto, String comentariosDeBoceto){
+        appendChange(new DisenoAgregadado(disenoID,boceto,comentariosDeBoceto)).apply();
+    }
+
 }
