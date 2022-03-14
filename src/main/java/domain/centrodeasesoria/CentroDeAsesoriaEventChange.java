@@ -1,7 +1,11 @@
 package domain.centrodeasesoria;
 
 import co.com.sofka.domain.generic.EventChange;
+import domain.centrodeasesoria.event.AsesoriaAgregada;
 import domain.centrodeasesoria.event.CentroDeAsesoriaCreado;
+import domain.centrodeasesoria.event.IngenieroAgregado;
+import domain.tallerdediseno.Diseno;
+import domain.tallerdediseno.event.DisenoAgregadado;
 import domain.tallerdediseno.event.TallerDeDisenoCreado;
 
 import java.util.ArrayList;
@@ -14,6 +18,14 @@ public class CentroDeAsesoriaEventChange extends EventChange {
             centroDeAsesoria.asesorias = new HashMap<>();
             centroDeAsesoria.ingenieros = new HashMap<>();
             centroDeAsesoria.ideas = new ArrayList<>();
+        });
+
+        apply((IngenieroAgregado event) -> {
+            centroDeAsesoria.ingenieros.put(event.getIngenieroID().value(),new Ingeniero(event.getIngenieroID(),event.getPersona(),event.getNumeroDeAsesoriasEnSimultaneo()));
+        });
+
+        apply((AsesoriaAgregada event) -> {
+            centroDeAsesoria.asesorias.put(event.getAsesoriaId().value(),new Asesoria(event.getAsesoriaId(),event.getIdea(),event.getEspectativasIdea()));
         });
     }
 }
