@@ -14,7 +14,7 @@ public class Ingeniero extends Entity<IngenieroID> {
     private Productividad productividadLaboral;
     private int numeroDeAsesoriasEnSimultaneo;
 
-    public Ingeniero(IngenieroID ingenieroID, Persona persona, int numeroDeAsesoriasEnSimultaneoEnSimultaneo) {
+    public Ingeniero(IngenieroID ingenieroID, Persona persona, int numeroDeAsesoriasEnSimultaneo) {
         super(ingenieroID);
         this.persona = persona;
         if(numeroDeAsesoriasEnSimultaneo <= 0){

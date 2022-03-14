@@ -4,9 +4,6 @@ import co.com.sofka.domain.generic.EventChange;
 import domain.centrodeasesoria.event.AsesoriaAgregada;
 import domain.centrodeasesoria.event.CentroDeAsesoriaCreado;
 import domain.centrodeasesoria.event.IngenieroAgregado;
-import domain.tallerdediseno.Diseno;
-import domain.tallerdediseno.event.DisenoAgregadado;
-import domain.tallerdediseno.event.TallerDeDisenoCreado;
 
 import java.util.ArrayList;
 import java.util.HashMap;

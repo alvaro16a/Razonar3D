@@ -17,10 +17,10 @@ public class AgregarIngeniero extends Command {
 
 
     public AgregarIngeniero(CentroDeAsesoriaID centroDeAsesoriaID, IngenieroID ingenieroID, Persona persona, int numeroDeAsesoriasEnSimultaneo) {
-        this.centroDeAsesoriaID=centroDeAsesoriaID;
         this.ingenieroID=ingenieroID;
         this.persona=persona;
         this.numeroDeAsesoriasEnSimultaneo=numeroDeAsesoriasEnSimultaneo;
+        this.centroDeAsesoriaID=centroDeAsesoriaID;
     }
 
     public CentroDeAsesoriaID getCentroDeAsesoriaID() {

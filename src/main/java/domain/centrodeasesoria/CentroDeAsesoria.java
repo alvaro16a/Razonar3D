@@ -53,8 +53,8 @@ public class CentroDeAsesoria extends AggregateEvent<CentroDeAsesoriaID> {
         appendChange(new IngenieroAgregado(ingenieroID,persona,numeroDeAsesoriasEnSimultaneo)).apply();
     }
 
-    public void agregarAsesoria(AsesoriaID entityId, Idea idea, String espectativasIdea){
-        appendChange(new AsesoriaAgregada(entityId,idea,espectativasIdea)).apply();
+    public void agregarAsesoria(AsesoriaID asesoriaID, Idea idea, String espectativasIdea){
+        appendChange(new AsesoriaAgregada(asesoriaID,idea,espectativasIdea)).apply();
     }
 
 
