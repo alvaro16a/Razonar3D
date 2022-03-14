@@ -1,4 +1,4 @@
-package domain.granja.event;
+package domain.tallerdediseno.command.granja.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import domain.value.Stl;

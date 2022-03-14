@@ -1,7 +1,7 @@
-package domain.granja.event;
+package domain.tallerdediseno.command.granja.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.granja.value.ImpresoraID;
+import domain.tallerdediseno.command.granja.value.ImpresoraID;
 
 public class ImpresionIniciada extends DomainEvent {
 

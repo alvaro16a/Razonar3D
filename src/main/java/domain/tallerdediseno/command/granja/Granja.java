@@ -1,13 +1,13 @@
-package domain.granja;
+package domain.tallerdediseno.command.granja;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.granja.event.GranjaCreada;
-import domain.granja.event.ImpresionIncluida;
-import domain.granja.event.ImpresionIniciada;
-import domain.granja.event.ImpresoraIncluida;
-import domain.granja.value.GranjaID;
-import domain.granja.value.ImpresoraID;
+import domain.tallerdediseno.command.granja.event.GranjaCreada;
+import domain.tallerdediseno.command.granja.event.ImpresionIncluida;
+import domain.tallerdediseno.command.granja.event.ImpresionIniciada;
+import domain.tallerdediseno.command.granja.event.ImpresoraIncluida;
+import domain.tallerdediseno.command.granja.value.GranjaID;
+import domain.tallerdediseno.command.granja.value.ImpresoraID;
 import domain.value.Stl;
 
 import java.util.List;

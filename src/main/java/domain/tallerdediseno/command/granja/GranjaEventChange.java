@@ -1,10 +1,10 @@
-package domain.granja;
+package domain.tallerdediseno.command.granja;
 
 import co.com.sofka.domain.generic.EventChange;
-import domain.granja.event.GranjaCreada;
-import domain.granja.event.ImpresionIncluida;
-import domain.granja.event.ImpresionIniciada;
-import domain.granja.event.ImpresoraIncluida;
+import domain.tallerdediseno.command.granja.event.GranjaCreada;
+import domain.tallerdediseno.command.granja.event.ImpresionIncluida;
+import domain.tallerdediseno.command.granja.event.ImpresionIniciada;
+import domain.tallerdediseno.command.granja.event.ImpresoraIncluida;
 import domain.value.Stl;
 
 import java.util.ArrayList;

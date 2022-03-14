@@ -1,8 +1,8 @@
-package domain.granja;
+package domain.tallerdediseno.command.granja;
 
 import co.com.sofka.domain.generic.Entity;
-import domain.granja.value.Estado;
-import domain.granja.value.ImpresoraID;
+import domain.tallerdediseno.command.granja.value.Estado;
+import domain.tallerdediseno.command.granja.value.ImpresoraID;
 import domain.value.Dimensiones;
 import domain.value.Material;
 import domain.value.Pieza;

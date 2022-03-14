@@ -1,7 +1,7 @@
-package domain.granja.command;
+package domain.tallerdediseno.command.granja.command;
 
 import co.com.sofka.domain.generic.Command;
-import domain.granja.value.GranjaID;
+import domain.tallerdediseno.command.granja.value.GranjaID;
 import domain.value.Stl;
 
 public class AgregarImpresion extends Command {

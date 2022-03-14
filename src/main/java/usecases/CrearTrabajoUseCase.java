@@ -5,8 +5,6 @@ import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import domain.cliente.Cliente;
 import domain.cliente.command.CrearTrabajo;
-import domain.granja.command.AgregarImpresora3D;
-import domain.value.Idea;
 
 public class CrearTrabajoUseCase extends UseCase<RequestCommand<CrearTrabajo>, ResponseEvents> {
 

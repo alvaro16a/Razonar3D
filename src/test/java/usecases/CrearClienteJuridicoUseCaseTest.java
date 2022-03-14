@@ -7,16 +7,8 @@ import domain.cliente.event.ClienteJuridicoCreado;
 import domain.cliente.value.ClienteID;
 import domain.cliente.value.Empresa;
 import domain.cliente.value.InformacionDeContacto;
-import domain.granja.Encargado;
-import domain.granja.command.CrearGranja;
-import domain.granja.event.GranjaCreada;
-import domain.granja.value.EncargadoID;
-import domain.granja.value.GranjaID;
-import domain.value.Persona;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CrearClienteJuridicoUseCaseTest {
 

@@ -2,8 +2,7 @@ package domain.centrodeasesoria;
 
 import co.com.sofka.domain.generic.Entity;
 import domain.centrodeasesoria.value.IngenieroID;
-import domain.granja.value.Productividad;
-import domain.tallerdediseno.value.DisenadorID;
+import domain.tallerdediseno.command.granja.value.Productividad;
 import domain.value.Persona;
 
 import java.util.Objects;

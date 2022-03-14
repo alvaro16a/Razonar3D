@@ -1,8 +1,8 @@
-package domain.granja.command;
+package domain.tallerdediseno.command.granja.command;
 
 import co.com.sofka.domain.generic.Command;
-import domain.granja.Encargado;
-import domain.granja.value.GranjaID;
+import domain.tallerdediseno.command.granja.Encargado;
+import domain.tallerdediseno.command.granja.value.GranjaID;
 
 public class CrearGranja extends Command {
 

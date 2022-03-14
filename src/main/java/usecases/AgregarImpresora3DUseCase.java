@@ -3,8 +3,8 @@ package usecases;
 import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
-import domain.granja.Granja;
-import domain.granja.command.AgregarImpresora3D;
+import domain.tallerdediseno.command.granja.Granja;
+import domain.tallerdediseno.command.granja.command.AgregarImpresora3D;
 
 public class AgregarImpresora3DUseCase extends UseCase<RequestCommand<AgregarImpresora3D>, ResponseEvents> {
 

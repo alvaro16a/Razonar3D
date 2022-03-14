@@ -1,4 +1,4 @@
-package domain.granja.value;
+package domain.tallerdediseno.command.granja.value;
 
 import co.com.sofka.domain.generic.ValueObject;
 

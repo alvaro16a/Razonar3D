@@ -1,8 +1,8 @@
-package domain.granja.command;
+package domain.tallerdediseno.command.granja.command;
 
 import co.com.sofka.domain.generic.Command;
-import domain.granja.value.GranjaID;
-import domain.granja.value.ImpresoraID;
+import domain.tallerdediseno.command.granja.value.GranjaID;
+import domain.tallerdediseno.command.granja.value.ImpresoraID;
 
 public class IniciarImpresion extends Command {
 

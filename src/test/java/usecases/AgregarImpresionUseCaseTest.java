@@ -4,15 +4,12 @@ import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.granja.Encargado;
-import domain.granja.command.AgregarImpresion;
-import domain.granja.command.AgregarImpresora3D;
-import domain.granja.event.GranjaCreada;
-import domain.granja.event.ImpresionIncluida;
-import domain.granja.event.ImpresoraIncluida;
-import domain.granja.value.EncargadoID;
-import domain.granja.value.GranjaID;
-import domain.granja.value.ImpresoraID;
+import domain.tallerdediseno.command.granja.Encargado;
+import domain.tallerdediseno.command.granja.command.AgregarImpresion;
+import domain.tallerdediseno.command.granja.event.GranjaCreada;
+import domain.tallerdediseno.command.granja.event.ImpresionIncluida;
+import domain.tallerdediseno.command.granja.value.EncargadoID;
+import domain.tallerdediseno.command.granja.value.GranjaID;
 import domain.value.Persona;
 import domain.value.Stl;
 import org.junit.jupiter.api.Assertions;
@@ -23,8 +20,6 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 class AgregarImpresionUseCaseTest {

@@ -1,8 +1,8 @@
-package domain.granja;
+package domain.tallerdediseno.command.granja;
 
 import co.com.sofka.domain.generic.Entity;
-import domain.granja.value.EncargadoID;
-import domain.granja.value.Productividad;
+import domain.tallerdediseno.command.granja.value.EncargadoID;
+import domain.tallerdediseno.command.granja.value.Productividad;
 import domain.value.Persona;
 
 public class Encargado extends Entity<EncargadoID> {

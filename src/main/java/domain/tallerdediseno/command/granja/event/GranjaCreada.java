@@ -1,8 +1,7 @@
-package domain.granja.event;
+package domain.tallerdediseno.command.granja.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.granja.Encargado;
-import domain.granja.value.GranjaID;
+import domain.tallerdediseno.command.granja.Encargado;
 
 public class GranjaCreada extends DomainEvent {
 

@@ -1,8 +1,7 @@
 package domain.tallerdediseno;
 
 import co.com.sofka.domain.generic.Entity;
-import domain.granja.value.EncargadoID;
-import domain.granja.value.Productividad;
+import domain.tallerdediseno.command.granja.value.Productividad;
 import domain.tallerdediseno.value.DisenadorID;
 import domain.value.Persona;
 

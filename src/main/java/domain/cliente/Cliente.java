@@ -7,8 +7,6 @@ import domain.cliente.event.ClienteJuridicoCreado;
 import domain.cliente.event.ClienteNaturalCreado;
 import domain.cliente.event.TrabajoCreado;
 import domain.cliente.value.*;
-import domain.granja.GranjaEventChange;
-import domain.value.Idea;
 import domain.value.Persona;
 
 import java.util.List;
